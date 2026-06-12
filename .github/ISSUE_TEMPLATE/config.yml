@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Sensitive data or security concern
+    url: https://github.com/panasheflf/MAVARA-RESEARCH/security
+    about: Do not post real participant data, secrets, or private partner information in public issues.

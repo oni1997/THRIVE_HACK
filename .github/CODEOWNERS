@@ -1,0 +1,5 @@
+# Repository maintainers should update this before launch.
+# CODEOWNERS helps route reviews, but branch protection/rulesets must be enabled
+# in GitHub settings to require approval before merging into main.
+
+* @panasheflf

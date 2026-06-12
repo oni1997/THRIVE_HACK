@@ -1,0 +1,31 @@
+name: Bug report
+description: Report a problem with scripts, docs, schemas, validation, or synthetic data.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is broken or confusing?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include commands, file paths, and expected versus actual behavior.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Python version, operating system, or tool version if relevant.
+  - type: checkboxes
+    id: data-safety
+    attributes:
+      label: Data safety
+      options:
+        - label: This report does not include real participant-level data, secrets, or private partner information.
+          required: true

@@ -1,0 +1,74 @@
+{
+  "schema_version": "0.1.0",
+  "project": "Menstrual Health Open",
+  "fields": {
+    "schema_version": {
+      "definition": "Version of the starter schema used by the record.",
+      "public_data_rule": "Use the published version string so tools can detect schema changes."
+    },
+    "record_id": {
+      "definition": "Synthetic or contribution-specific record identifier.",
+      "public_data_rule": "Never use real participant IDs in public datasets."
+    },
+    "age_band": {
+      "definition": "Broad age range.",
+      "public_data_rule": "Use broad bands to reduce re-identification risk."
+    },
+    "country_code": {
+      "definition": "Two-letter country code.",
+      "public_data_rule": "Country-level geography is acceptable for synthetic examples."
+    },
+    "region": {
+      "definition": "Coarse region label.",
+      "public_data_rule": "Avoid exact addresses, villages, GPS, or small-community labels."
+    },
+    "setting": {
+      "definition": "Urban, peri-urban, or rural setting.",
+      "public_data_rule": "Use broad categories."
+    },
+    "collection_month": {
+      "definition": "Month of collection or simulated collection.",
+      "public_data_rule": "Use month-level dates instead of exact collection or cycle dates."
+    },
+    "cycle_length_days": {
+      "definition": "Reported or estimated cycle length in days.",
+      "public_data_rule": "Use only synthetic values in public datasets."
+    },
+    "period_duration_days": {
+      "definition": "Reported period duration in days.",
+      "public_data_rule": "Use only synthetic values in public datasets."
+    },
+    "flow_heaviness": {
+      "definition": "Self-reported menstrual flow category.",
+      "public_data_rule": "Use controlled categories for validation and translation."
+    },
+    "pain_score": {
+      "definition": "Self-reported pain score from 0 to 10.",
+      "public_data_rule": "Use only synthetic values in public datasets."
+    },
+    "reported_symptoms": {
+      "definition": "Semicolon-separated symptom labels from a controlled list.",
+      "public_data_rule": "Avoid raw free text in public examples."
+    },
+    "missed_school_or_work": {
+      "definition": "Whether menstrual symptoms affected attendance.",
+      "public_data_rule": "Use yes/no/unknown."
+    },
+    "product_access": {
+      "definition": "Reported access to menstrual products.",
+      "public_data_rule": "Use broad access categories."
+    },
+    "healthcare_access": {
+      "definition": "Reported care-seeking or access status.",
+      "public_data_rule": "Use broad categories."
+    },
+    "collection_method": {
+      "definition": "How the record was collected or simulated.",
+      "public_data_rule": "Public examples should be synthetic or fictional."
+    },
+    "source_type": {
+      "definition": "Data source class.",
+      "public_data_rule": "Public row-level files should be synthetic unless explicitly approved as aggregate."
+    }
+  }
+}

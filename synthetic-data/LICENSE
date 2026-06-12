@@ -1,0 +1,15 @@
+# Synthetic Data License
+
+SPDX-License-Identifier: CC0-1.0
+
+Synthetic datasets and generated synthetic fixtures in this directory are
+released under CC0 1.0 Universal unless a file says otherwise.
+
+The data here is fictional and must not be treated as clinical, epidemiological,
+or participant-level evidence. It exists so contributors can build, test,
+validate, localize, and prototype open infrastructure without using real
+participant data.
+
+Canonical license text:
+
+https://creativecommons.org/publicdomain/zero/1.0/legalcode

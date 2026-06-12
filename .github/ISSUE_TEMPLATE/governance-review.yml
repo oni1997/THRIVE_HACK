@@ -1,0 +1,31 @@
+name: Governance, ethics, or privacy review
+description: Suggest an improvement to policy, consent, privacy, or review guidance.
+title: "[Governance]: "
+labels: ["governance", "privacy"]
+body:
+  - type: textarea
+    id: concern
+    attributes:
+      label: Concern or improvement
+      description: What policy, workflow, or guidance should be reviewed?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Explain the user group, data flow, contribution type, or scenario this affects.
+    validations:
+      required: true
+  - type: textarea
+    id: proposed-change
+    attributes:
+      label: Proposed change
+      description: Suggest wording, controls, review steps, or documentation changes if you have them.
+  - type: checkboxes
+    id: public-safety
+    attributes:
+      label: Public issue safety
+      options:
+        - label: This issue does not include sensitive participant data, secrets, private partner agreements, or identifying details.
+          required: true

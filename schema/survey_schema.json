@@ -1,0 +1,126 @@
+{
+  "schema_version": "0.1.0",
+  "name": "menstrual_health_open_starter_schema",
+  "description": "Starter schema for synthetic menstrual health research infrastructure datasets.",
+  "privacy_position": "Public examples must be synthetic or aggregate. Do not include direct identifiers, exact cycle dates, precise location, consent records, or raw free text.",
+  "fields": [
+    {
+      "name": "schema_version",
+      "type": "string",
+      "required": true,
+      "description": "Schema version used by the record. Current starter version is 0.1.0."
+    },
+    {
+      "name": "record_id",
+      "type": "string",
+      "required": true,
+      "description": "Synthetic or contribution-specific record identifier. Must not be a real participant identifier."
+    },
+    {
+      "name": "age_band",
+      "type": "enum",
+      "required": true,
+      "allowed_values": ["10-14", "15-19", "20-24", "25-34", "35-44", "45-54"],
+      "description": "Broad age band."
+    },
+    {
+      "name": "country_code",
+      "type": "string",
+      "required": true,
+      "format": "ISO 3166-1 alpha-2",
+      "description": "Two-letter country code."
+    },
+    {
+      "name": "region",
+      "type": "string",
+      "required": false,
+      "description": "Coarse region label. Avoid precise location."
+    },
+    {
+      "name": "setting",
+      "type": "enum",
+      "required": true,
+      "allowed_values": ["urban", "peri_urban", "rural"],
+      "description": "Broad setting category."
+    },
+    {
+      "name": "collection_month",
+      "type": "string",
+      "required": true,
+      "format": "YYYY-MM",
+      "description": "Coarse collection month, not exact date."
+    },
+    {
+      "name": "cycle_length_days",
+      "type": "integer",
+      "required": true,
+      "minimum": 15,
+      "maximum": 60,
+      "description": "Reported or estimated cycle length."
+    },
+    {
+      "name": "period_duration_days",
+      "type": "integer",
+      "required": true,
+      "minimum": 1,
+      "maximum": 14,
+      "description": "Reported period duration."
+    },
+    {
+      "name": "flow_heaviness",
+      "type": "enum",
+      "required": true,
+      "allowed_values": ["light", "moderate", "heavy", "very_heavy"],
+      "description": "Self-reported flow category."
+    },
+    {
+      "name": "pain_score",
+      "type": "integer",
+      "required": true,
+      "minimum": 0,
+      "maximum": 10,
+      "description": "Self-reported pain score from 0 to 10."
+    },
+    {
+      "name": "reported_symptoms",
+      "type": "string",
+      "required": false,
+      "description": "Semicolon-separated controlled symptom labels. Avoid raw free text in public examples."
+    },
+    {
+      "name": "missed_school_or_work",
+      "type": "enum",
+      "required": true,
+      "allowed_values": ["yes", "no", "unknown"],
+      "description": "Whether menstrual symptoms affected school or work attendance."
+    },
+    {
+      "name": "product_access",
+      "type": "enum",
+      "required": true,
+      "allowed_values": ["reliable", "sometimes_limited", "often_limited", "unknown"],
+      "description": "Reported access to menstrual products."
+    },
+    {
+      "name": "healthcare_access",
+      "type": "enum",
+      "required": true,
+      "allowed_values": ["visited_provider", "wanted_but_could_not_access", "not_needed", "unknown"],
+      "description": "Reported care-seeking or access status."
+    },
+    {
+      "name": "collection_method",
+      "type": "enum",
+      "required": true,
+      "allowed_values": ["mobile_form", "paper_form", "chw_interview", "web_form"],
+      "description": "How the record was collected or simulated."
+    },
+    {
+      "name": "source_type",
+      "type": "enum",
+      "required": true,
+      "allowed_values": ["synthetic", "example", "aggregate"],
+      "description": "Public examples should generally use synthetic."
+    }
+  ]
+}

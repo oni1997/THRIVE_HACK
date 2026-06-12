@@ -1,0 +1,27 @@
+{
+  "schema_version": "0.1.0",
+  "minimum_completeness_score": 0.85,
+  "required_fields": [
+    "record_id",
+    "schema_version",
+    "age_band",
+    "country_code",
+    "setting",
+    "collection_month",
+    "cycle_length_days",
+    "period_duration_days",
+    "flow_heaviness",
+    "pain_score",
+    "missed_school_or_work",
+    "product_access",
+    "healthcare_access",
+    "collection_method",
+    "source_type"
+  ],
+  "privacy_notes": [
+    "Use collection_month instead of exact collection date for public examples.",
+    "Use coarse region labels instead of precise location.",
+    "Do not include names, phone numbers, exact addresses, precise GPS, consent records, or raw free text in public datasets.",
+    "Public dashboards should use synthetic or aggregate data only."
+  ]
+}

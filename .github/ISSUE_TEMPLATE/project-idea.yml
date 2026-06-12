@@ -1,0 +1,53 @@
+name: Project inspiration or contribution idea
+description: Propose an open-ended direction for contributors to explore.
+title: "[Idea]: "
+labels: ["idea", "hackathon"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ideas are invitations, not assignments. This project should support many contribution directions.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or opportunity
+      description: What could this improve for menstrual health research infrastructure?
+    validations:
+      required: true
+  - type: textarea
+    id: possible-direction
+    attributes:
+      label: Possible direction
+      description: Describe one possible approach without making it the only acceptable solution.
+    validations:
+      required: true
+  - type: dropdown
+    id: area
+    attributes:
+      label: Area
+      options:
+        - Synthetic data
+        - Schema and standards
+        - Validation and data quality
+        - Governance and consent
+        - Privacy-preserving analytics
+        - Accessibility and localization
+        - Research workflows
+        - Education and communication
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: data
+    attributes:
+      label: Data assumptions
+      description: Note whether this can be built with synthetic data, documented assumptions, or reviewed aggregate data.
+    validations:
+      required: true
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Safety check
+      options:
+        - label: This idea does not require public real participant-level health data.
+          required: true
