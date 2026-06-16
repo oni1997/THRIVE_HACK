@@ -1,0 +1,201 @@
+schema_version,record_id,age_band,country_code,region,setting,collection_month,cycle_length_days,period_duration_days,flow_heaviness,pain_score,reported_symptoms,symptom_free_text,missed_school_or_work,product_access,healthcare_access,collection_method,source_type,condition_iron_deficiency,condition_fibroids,condition_coagulation_disorder
+0.1.0,SYN-00001,45-54,KE,KE-region-1,urban,2026-04,30,5,light,1,,,yes,sometimes_limited,visited_provider,paper_form,synthetic,no,no,no
+0.1.0,SYN-00002,25-34,RW,RW-region-1,peri_urban,2026-07,20,8,heavy,8,back_pain;cramps;dizziness;fatigue;headache,Lower back pain that radiates down my legs,yes,often_limited,wanted_but_could_not_access,chw_interview,synthetic,no,no,yes
+0.1.0,SYN-00003,45-54,KE,KE-region-3,rural,2026-07,35,7,moderate,4,dizziness;fatigue,Felt lightheaded when standing up quickly | Been feeling so tired I can't do my usual work,unknown,sometimes_limited,not_needed,paper_form,synthetic,no,no,no
+0.1.0,SYN-00004,45-54,ZW,ZW-region-2,urban,2026-09,35,6,moderate,6,headache,,yes,unknown,visited_provider,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00005,15-19,ZA,ZA-region-2,rural,2026-03,31,7,moderate,0,back_pain;dizziness;fatigue,,unknown,often_limited,wanted_but_could_not_access,mobile_form,synthetic,yes,no,no
+0.1.0,SYN-00006,10-14,UG,UG-region-2,peri_urban,2026-05,34,2,light,7,back_pain;fatigue,,yes,unknown,wanted_but_could_not_access,paper_form,synthetic,no,no,no
+0.1.0,SYN-00007,45-54,UG,UG-region-2,peri_urban,2026-01,30,6,light,0,,,unknown,reliable,visited_provider,paper_form,synthetic,no,no,no
+0.1.0,SYN-00008,20-24,KE,KE-region-4,rural,2026-06,24,8,light,7,back_pain,Lower back pain that radiates down my legs,no,unknown,visited_provider,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00009,10-14,RW,RW-region-1,urban,2026-02,34,2,moderate,3,back_pain,,unknown,sometimes_limited,wanted_but_could_not_access,web_form,synthetic,no,no,no
+0.1.0,SYN-00010,25-34,GH,GH-region-2,urban,2026-01,25,5,heavy,10,dizziness;mood_changes,Clots the size of coins passing,unknown,reliable,not_needed,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00011,35-44,NG,NG-region-1,urban,2026-01,35,14,moderate,3,back_pain;cramps,,yes,unknown,visited_provider,mobile_form,synthetic,no,yes,no
+0.1.0,SYN-00012,15-19,UG,UG-region-3,urban,2026-02,30,8,heavy,7,cramps;dizziness,,unknown,sometimes_limited,not_needed,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00013,15-19,TZ,TZ-region-3,rural,2026-03,34,4,light,6,,,yes,often_limited,wanted_but_could_not_access,web_form,synthetic,no,no,no
+0.1.0,SYN-00014,10-14,KE,KE-region-2,urban,2026-01,30,6,light,5,,,no,often_limited,not_needed,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00015,15-19,KE,KE-region-4,peri_urban,2026-01,35,3,moderate,2,,,yes,sometimes_limited,not_needed,web_form,synthetic,no,no,no
+0.1.0,SYN-00016,15-19,TZ,TZ-region-2,urban,2026-04,24,8,heavy,6,headache,,no,reliable,wanted_but_could_not_access,web_form,synthetic,no,no,no
+0.1.0,SYN-00017,20-24,UG,UG-region-3,rural,2026-01,22,4,moderate,0,,,unknown,reliable,unknown,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00018,35-44,KE,KE-region-3,peri_urban,2026-10,26,5,moderate,3,,,unknown,often_limited,visited_provider,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00019,20-24,ZA,ZA-region-3,rural,2026-05,30,6,very_heavy,5,nausea,,unknown,sometimes_limited,unknown,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00020,15-19,ZW,ZW-region-3,rural,2026-04,22,8,moderate,5,,,unknown,sometimes_limited,wanted_but_could_not_access,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00021,35-44,KE,KE-region-1,peri_urban,2026-07,27,3,heavy,10,,,unknown,sometimes_limited,wanted_but_could_not_access,web_form,synthetic,no,no,no
+0.1.0,SYN-00022,10-14,ZW,ZW-region-2,urban,2026-12,30,8,moderate,7,dizziness;nausea,,unknown,unknown,unknown,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00023,20-24,ZW,ZW-region-2,rural,2026-04,26,6,light,5,,,yes,unknown,wanted_but_could_not_access,paper_form,synthetic,no,no,no
+0.1.0,SYN-00024,35-44,ZW,ZW-region-4,peri_urban,2026-12,34,5,heavy,3,fatigue;headache,,yes,sometimes_limited,unknown,paper_form,synthetic,yes,no,no
+0.1.0,SYN-00025,25-34,GH,GH-region-4,urban,2026-05,26,3,light,6,headache,,no,unknown,not_needed,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00026,10-14,UG,UG-region-4,urban,2026-11,24,8,heavy,6,,Bleeding through clothes twice this cycle,unknown,sometimes_limited,unknown,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00027,35-44,KE,KE-region-4,urban,2026-02,27,8,moderate,6,back_pain;cramps;headache;mood_changes,Back ache made it hard to sit through class,yes,often_limited,unknown,paper_form,synthetic,no,yes,no
+0.1.0,SYN-00028,45-54,TZ,TZ-region-3,rural,2026-08,26,8,moderate,4,,,yes,sometimes_limited,unknown,web_form,synthetic,no,no,no
+0.1.0,SYN-00029,20-24,NG,NG-region-4,peri_urban,2026-11,29,2,heavy,7,cramps;fatigue,,yes,unknown,unknown,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00030,45-54,RW,RW-region-3,peri_urban,2026-04,26,7,moderate,5,headache,,no,reliable,wanted_but_could_not_access,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00031,45-54,NG,NG-region-3,urban,2026-01,22,8,very_heavy,7,,,no,sometimes_limited,not_needed,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00032,45-54,NG,NG-region-1,rural,2026-02,28,5,moderate,7,fatigue,Fatigue lasted for days after bleeding stopped,yes,reliable,visited_provider,paper_form,synthetic,no,no,no
+0.1.0,SYN-00033,20-24,KE,KE-region-1,urban,2026-04,35,8,heavy,10,cramps;dizziness;fatigue;headache,"Really bad cramps this time, could barely stand",yes,often_limited,unknown,mobile_form,synthetic,yes,no,no
+0.1.0,SYN-00034,45-54,RW,RW-region-3,peri_urban,2026-08,22,2,moderate,2,,,no,reliable,unknown,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00035,35-44,ZW,ZW-region-4,peri_urban,2026-01,33,4,heavy,3,back_pain;cramps;dizziness;fatigue;mood_changes,Mild cramping on first day only | Back ache made it hard to sit through class | Heavy flow that soaked through to my clothes,yes,often_limited,unknown,web_form,synthetic,yes,yes,no
+0.1.0,SYN-00036,35-44,NG,NG-region-4,peri_urban,2026-02,32,3,very_heavy,6,dizziness,,yes,sometimes_limited,unknown,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00037,25-34,ZW,ZW-region-3,urban,2026-01,34,2,moderate,2,back_pain,Dull ache in my lower back the whole time,no,often_limited,unknown,paper_form,synthetic,no,no,no
+0.1.0,SYN-00038,20-24,ZA,ZA-region-4,peri_urban,2026-07,24,8,light,6,cramps,,no,sometimes_limited,unknown,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00039,20-24,KE,KE-region-1,peri_urban,2026-06,22,11,light,2,dizziness;fatigue;headache;mood_changes,,yes,reliable,not_needed,chw_interview,synthetic,yes,no,yes
+0.1.0,SYN-00040,35-44,ZA,ZA-region-2,rural,2026-04,30,7,moderate,6,,,no,unknown,not_needed,web_form,synthetic,no,no,no
+0.1.0,SYN-00041,25-34,TZ,TZ-region-4,rural,2026-05,28,3,very_heavy,7,cramps;mood_changes,,no,sometimes_limited,not_needed,paper_form,synthetic,no,yes,no
+0.1.0,SYN-00042,45-54,NG,NG-region-3,rural,2026-09,30,4,heavy,3,cramps;fatigue,Severe cramping that painkillers didn't help | Exhausted all through my period,no,often_limited,wanted_but_could_not_access,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00043,20-24,UG,UG-region-4,urban,2026-06,34,8,light,6,cramps;headache,,no,often_limited,unknown,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00044,10-14,UG,UG-region-3,rural,2026-08,31,5,very_heavy,7,,Changing pads every hour on heavy days,yes,sometimes_limited,wanted_but_could_not_access,web_form,synthetic,no,no,no
+0.1.0,SYN-00045,45-54,ZA,ZA-region-4,rural,2026-04,30,5,light,7,cramps,,unknown,reliable,not_needed,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00046,10-14,ZW,ZW-region-2,urban,2026-06,24,3,light,5,cramps;fatigue,,unknown,reliable,not_needed,paper_form,synthetic,no,no,no
+0.1.0,SYN-00047,15-19,KE,KE-region-1,rural,2026-08,21,3,heavy,8,cramps,,yes,unknown,not_needed,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00048,35-44,GH,GH-region-1,rural,2026-08,21,5,moderate,0,nausea,,unknown,unknown,visited_provider,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00049,15-19,TZ,TZ-region-2,rural,2026-07,28,6,very_heavy,7,cramps;nausea,Cramps started two days before my period,unknown,unknown,unknown,web_form,synthetic,no,no,no
+0.1.0,SYN-00050,20-24,TZ,TZ-region-3,peri_urban,2026-03,22,5,light,1,,,unknown,reliable,not_needed,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00051,25-34,GH,GH-region-3,peri_urban,2026-02,24,8,light,7,,,no,often_limited,wanted_but_could_not_access,web_form,synthetic,no,no,no
+0.1.0,SYN-00052,35-44,GH,GH-region-4,rural,2026-02,35,4,light,4,cramps,,yes,sometimes_limited,visited_provider,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00053,25-34,ZW,ZW-region-2,peri_urban,2026-03,27,2,very_heavy,3,dizziness;fatigue;headache;mood_changes;nausea,,no,often_limited,not_needed,mobile_form,synthetic,yes,no,no
+0.1.0,SYN-00054,15-19,NG,NG-region-4,peri_urban,2026-10,22,5,heavy,8,cramps;nausea,Clots the size of coins passing,yes,unknown,not_needed,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00055,15-19,ZW,ZW-region-2,rural,2026-06,29,2,light,6,back_pain,,no,sometimes_limited,visited_provider,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00056,20-24,UG,UG-region-4,rural,2026-10,24,3,light,4,fatigue;mood_changes,,yes,unknown,not_needed,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00057,25-34,TZ,TZ-region-1,peri_urban,2026-10,21,4,moderate,0,cramps,,unknown,unknown,unknown,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00058,45-54,RW,RW-region-4,peri_urban,2026-09,32,2,moderate,5,fatigue;mood_changes,Fatigue lasted for days after bleeding stopped,yes,sometimes_limited,not_needed,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00059,20-24,GH,GH-region-4,rural,2026-03,25,7,heavy,7,dizziness;fatigue,"Nearly fainted at the market | Low energy, sleeping more than usual",no,reliable,not_needed,web_form,synthetic,no,no,no
+0.1.0,SYN-00060,15-19,KE,KE-region-2,rural,2026-12,33,3,moderate,5,back_pain;cramps;dizziness,Cramps started two days before my period,yes,unknown,not_needed,paper_form,synthetic,no,no,yes
+0.1.0,SYN-00061,45-54,ZW,ZW-region-4,urban,2026-03,26,7,moderate,3,back_pain;nausea,,no,sometimes_limited,wanted_but_could_not_access,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00062,20-24,KE,KE-region-4,rural,2026-06,28,6,heavy,7,,,no,unknown,visited_provider,web_form,synthetic,no,no,no
+0.1.0,SYN-00063,10-14,UG,UG-region-4,urban,2026-02,25,7,moderate,2,back_pain;dizziness;fatigue;headache;nausea,Lower back pain that radiates down my legs,yes,unknown,visited_provider,paper_form,synthetic,yes,no,no
+0.1.0,SYN-00064,10-14,UG,UG-region-3,urban,2026-05,22,6,moderate,5,back_pain;dizziness,,unknown,often_limited,visited_provider,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00065,10-14,UG,UG-region-2,urban,2026-05,32,3,light,7,dizziness;headache,Nearly fainted at the market,no,reliable,not_needed,chw_interview,synthetic,yes,no,no
+0.1.0,SYN-00066,25-34,ZW,ZW-region-2,peri_urban,2026-09,33,2,moderate,4,cramps;nausea,,no,often_limited,not_needed,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00067,20-24,ZW,ZW-region-1,rural,2026-11,30,5,moderate,5,mood_changes,,yes,unknown,not_needed,paper_form,synthetic,no,no,no
+0.1.0,SYN-00068,35-44,ZW,ZW-region-2,urban,2026-10,25,5,moderate,0,dizziness;fatigue;headache;mood_changes;nausea,,yes,often_limited,unknown,paper_form,synthetic,yes,no,no
+0.1.0,SYN-00069,25-34,NG,NG-region-4,rural,2026-09,29,4,heavy,4,back_pain;cramps;dizziness;fatigue;mood_changes;nausea,Felt lightheaded when standing up quickly | Fatigue lasted for days after bleeding stopped,yes,unknown,visited_provider,paper_form,synthetic,no,yes,no
+0.1.0,SYN-00070,25-34,ZW,ZW-region-2,rural,2026-05,33,3,moderate,2,dizziness,,yes,sometimes_limited,wanted_but_could_not_access,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00071,35-44,TZ,TZ-region-2,urban,2026-10,30,6,light,4,,,unknown,sometimes_limited,wanted_but_could_not_access,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00072,10-14,KE,KE-region-3,urban,2026-11,30,7,light,6,,,no,often_limited,unknown,paper_form,synthetic,no,no,no
+0.1.0,SYN-00073,20-24,ZW,ZW-region-4,urban,2026-03,30,3,moderate,5,back_pain,,unknown,reliable,not_needed,paper_form,synthetic,no,no,no
+0.1.0,SYN-00074,15-19,NG,NG-region-4,urban,2026-05,27,6,moderate,2,cramps;dizziness;fatigue,,yes,reliable,visited_provider,web_form,synthetic,yes,no,no
+0.1.0,SYN-00075,20-24,ZA,ZA-region-3,peri_urban,2026-10,33,8,heavy,10,cramps;dizziness;fatigue,Mild cramping on first day only | Bleeding through clothes twice this cycle,unknown,unknown,not_needed,chw_interview,synthetic,yes,no,no
+0.1.0,SYN-00076,25-34,TZ,TZ-region-2,peri_urban,2026-12,33,7,very_heavy,7,cramps;mood_changes,,unknown,reliable,unknown,paper_form,synthetic,no,no,no
+0.1.0,SYN-00077,25-34,NG,NG-region-2,rural,2026-07,26,5,light,7,,,no,unknown,visited_provider,paper_form,synthetic,no,no,no
+0.1.0,SYN-00078,45-54,ZW,ZW-region-2,rural,2026-04,31,8,moderate,5,back_pain;mood_changes,Back ache made it hard to sit through class,unknown,often_limited,wanted_but_could_not_access,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00079,45-54,ZW,ZW-region-2,peri_urban,2026-05,22,6,heavy,7,dizziness;nausea,,no,reliable,not_needed,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00080,20-24,ZW,ZW-region-3,urban,2026-12,22,6,heavy,5,dizziness;fatigue,Nearly fainted at the market | Exhausted all through my period | Heavy flow that soaked through to my clothes,yes,sometimes_limited,visited_provider,paper_form,synthetic,no,no,no
+0.1.0,SYN-00081,25-34,ZW,ZW-region-1,rural,2026-03,31,6,moderate,1,,,unknown,unknown,wanted_but_could_not_access,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00082,25-34,NG,NG-region-4,rural,2026-03,35,4,light,1,nausea,,unknown,unknown,not_needed,paper_form,synthetic,no,no,no
+0.1.0,SYN-00083,45-54,ZW,ZW-region-2,rural,2026-03,23,6,heavy,6,back_pain;nausea,Back ache made it hard to sit through class,unknown,sometimes_limited,visited_provider,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00084,20-24,UG,UG-region-3,peri_urban,2026-03,21,7,moderate,3,,,no,unknown,not_needed,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00085,20-24,RW,RW-region-1,urban,2026-09,27,7,very_heavy,8,dizziness;nausea,,unknown,unknown,not_needed,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00086,35-44,RW,RW-region-1,rural,2026-08,32,6,moderate,3,cramps,,unknown,sometimes_limited,unknown,web_form,synthetic,no,no,no
+0.1.0,SYN-00087,45-54,TZ,TZ-region-3,rural,2026-08,29,2,heavy,4,back_pain;cramps;dizziness;fatigue;headache;nausea,,yes,unknown,unknown,paper_form,synthetic,yes,no,yes
+0.1.0,SYN-00088,20-24,RW,RW-region-3,rural,2026-04,22,14,moderate,0,back_pain;cramps;mood_changes,,yes,often_limited,wanted_but_could_not_access,paper_form,synthetic,no,yes,no
+0.1.0,SYN-00089,35-44,NG,NG-region-4,rural,2026-03,33,6,moderate,6,mood_changes,,no,often_limited,unknown,paper_form,synthetic,no,no,no
+0.1.0,SYN-00090,15-19,TZ,TZ-region-2,rural,2026-05,29,6,moderate,6,,,no,sometimes_limited,not_needed,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00091,10-14,RW,RW-region-3,urban,2026-05,33,8,heavy,6,back_pain;mood_changes,,unknown,reliable,wanted_but_could_not_access,paper_form,synthetic,no,no,no
+0.1.0,SYN-00092,25-34,RW,RW-region-3,rural,2026-06,27,5,moderate,4,headache;mood_changes,,no,unknown,unknown,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00093,20-24,RW,RW-region-1,peri_urban,2026-09,26,8,heavy,9,back_pain;cramps;dizziness;mood_changes,,yes,reliable,visited_provider,mobile_form,synthetic,no,yes,no
+0.1.0,SYN-00094,45-54,RW,RW-region-2,urban,2026-04,31,2,moderate,7,cramps;fatigue,,yes,often_limited,not_needed,chw_interview,synthetic,no,yes,no
+0.1.0,SYN-00095,25-34,ZW,ZW-region-2,rural,2026-02,31,8,heavy,4,back_pain;cramps,Back ache made it hard to sit through class | Changing pads every hour on heavy days,yes,unknown,not_needed,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00096,15-19,RW,RW-region-3,rural,2026-01,35,6,light,4,cramps;mood_changes,,yes,sometimes_limited,wanted_but_could_not_access,web_form,synthetic,no,no,no
+0.1.0,SYN-00097,35-44,RW,RW-region-2,rural,2026-02,33,7,moderate,2,cramps;dizziness,Dizzy spells especially on heavy days,unknown,unknown,not_needed,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00098,25-34,ZW,ZW-region-4,urban,2026-06,22,8,heavy,9,fatigue;headache,"Low energy, sleeping more than usual | Bleeding through clothes twice this cycle",unknown,reliable,visited_provider,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00099,10-14,NG,NG-region-1,urban,2026-05,22,4,moderate,0,cramps;dizziness,,unknown,unknown,unknown,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00100,15-19,NG,NG-region-4,rural,2026-02,23,5,moderate,1,nausea,,no,often_limited,not_needed,paper_form,synthetic,no,no,no
+0.1.0,SYN-00101,35-44,RW,RW-region-2,peri_urban,2026-11,28,7,moderate,5,dizziness;fatigue;mood_changes,,yes,reliable,unknown,paper_form,synthetic,yes,no,no
+0.1.0,SYN-00102,45-54,KE,KE-region-4,peri_urban,2026-10,32,5,moderate,2,cramps,,no,unknown,unknown,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00103,35-44,KE,KE-region-4,urban,2026-02,30,7,moderate,0,mood_changes;nausea,,no,reliable,visited_provider,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00104,35-44,RW,RW-region-1,peri_urban,2026-12,26,2,heavy,5,cramps,,no,sometimes_limited,not_needed,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00105,35-44,ZW,ZW-region-2,peri_urban,2026-12,21,8,moderate,4,back_pain;cramps,,no,sometimes_limited,wanted_but_could_not_access,paper_form,synthetic,no,no,no
+0.1.0,SYN-00106,25-34,RW,RW-region-2,peri_urban,2026-04,28,6,moderate,3,nausea,,yes,often_limited,visited_provider,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00107,20-24,UG,UG-region-2,urban,2026-11,30,5,moderate,5,dizziness;nausea,,yes,often_limited,visited_provider,paper_form,synthetic,no,no,no
+0.1.0,SYN-00108,10-14,NG,NG-region-2,peri_urban,2026-09,27,3,light,6,mood_changes,,unknown,sometimes_limited,unknown,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00109,25-34,GH,GH-region-4,peri_urban,2026-08,27,7,moderate,7,nausea,,unknown,sometimes_limited,visited_provider,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00110,10-14,TZ,TZ-region-1,urban,2026-12,29,6,heavy,10,,Clots the size of coins passing,unknown,sometimes_limited,unknown,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00111,15-19,TZ,TZ-region-3,urban,2026-12,33,8,moderate,1,,,yes,unknown,wanted_but_could_not_access,paper_form,synthetic,no,no,no
+0.1.0,SYN-00112,10-14,UG,UG-region-1,rural,2026-05,30,4,heavy,7,cramps;mood_changes,,yes,sometimes_limited,wanted_but_could_not_access,paper_form,synthetic,no,no,no
+0.1.0,SYN-00113,15-19,ZA,ZA-region-4,peri_urban,2026-04,27,4,very_heavy,4,dizziness;headache;nausea,Nearly fainted at the market,yes,often_limited,not_needed,chw_interview,synthetic,yes,no,no
+0.1.0,SYN-00114,25-34,UG,UG-region-1,rural,2026-01,28,7,very_heavy,5,fatigue;headache;mood_changes;nausea,Changing pads every hour on heavy days,yes,reliable,wanted_but_could_not_access,paper_form,synthetic,no,yes,no
+0.1.0,SYN-00115,10-14,UG,UG-region-3,urban,2026-06,22,7,light,6,,,yes,often_limited,wanted_but_could_not_access,web_form,synthetic,no,no,no
+0.1.0,SYN-00116,15-19,NG,NG-region-3,urban,2026-12,35,8,moderate,2,back_pain;mood_changes,,yes,reliable,not_needed,paper_form,synthetic,no,yes,no
+0.1.0,SYN-00117,45-54,ZA,ZA-region-1,peri_urban,2026-09,22,3,light,6,mood_changes,,unknown,reliable,not_needed,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00118,35-44,ZA,ZA-region-1,peri_urban,2026-07,21,6,very_heavy,4,,Changing pads every hour on heavy days,yes,unknown,unknown,web_form,synthetic,no,no,no
+0.1.0,SYN-00119,35-44,NG,NG-region-4,peri_urban,2026-05,25,7,heavy,4,cramps;dizziness;fatigue,Mild cramping on first day only | Been feeling so tired I can't do my usual work,yes,often_limited,visited_provider,web_form,synthetic,yes,yes,no
+0.1.0,SYN-00120,25-34,NG,NG-region-4,peri_urban,2026-02,21,8,very_heavy,3,cramps;dizziness;fatigue;nausea,,no,often_limited,not_needed,chw_interview,synthetic,yes,no,no
+0.1.0,SYN-00121,20-24,RW,RW-region-2,peri_urban,2026-03,33,8,moderate,7,,,unknown,reliable,unknown,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00122,45-54,GH,GH-region-4,peri_urban,2026-02,27,2,heavy,6,dizziness,Felt lightheaded when standing up quickly,yes,reliable,unknown,paper_form,synthetic,yes,no,no
+0.1.0,SYN-00123,20-24,ZA,ZA-region-3,rural,2026-04,23,8,light,3,cramps;fatigue,Severe cramping that painkillers didn't help | Been feeling so tired I can't do my usual work,yes,unknown,not_needed,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00124,20-24,GH,GH-region-3,urban,2026-05,27,6,light,5,,,unknown,sometimes_limited,visited_provider,web_form,synthetic,no,no,no
+0.1.0,SYN-00125,35-44,RW,RW-region-1,urban,2026-10,23,3,light,3,headache,,unknown,often_limited,visited_provider,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00126,45-54,ZW,ZW-region-4,urban,2026-01,23,5,light,0,fatigue;headache;nausea,,no,reliable,not_needed,web_form,synthetic,yes,no,no
+0.1.0,SYN-00127,35-44,RW,RW-region-3,rural,2026-07,28,6,moderate,5,headache,,unknown,often_limited,wanted_but_could_not_access,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00128,20-24,GH,GH-region-1,peri_urban,2026-04,24,7,very_heavy,4,,,no,unknown,not_needed,paper_form,synthetic,no,no,no
+0.1.0,SYN-00129,45-54,UG,UG-region-2,rural,2026-02,34,5,moderate,3,dizziness;fatigue;headache;mood_changes,,yes,often_limited,visited_provider,chw_interview,synthetic,yes,no,no
+0.1.0,SYN-00130,35-44,KE,KE-region-1,peri_urban,2026-08,32,6,very_heavy,10,back_pain;cramps;dizziness;fatigue;headache;mood_changes,Nearly fainted at the market | Exhausted all through my period,no,reliable,wanted_but_could_not_access,chw_interview,synthetic,no,yes,no
+0.1.0,SYN-00131,10-14,UG,UG-region-4,peri_urban,2026-03,24,3,moderate,0,dizziness;fatigue;nausea,,yes,reliable,not_needed,web_form,synthetic,yes,no,no
+0.1.0,SYN-00132,45-54,NG,NG-region-3,rural,2026-04,27,7,light,3,back_pain;mood_changes,Back ache made it hard to sit through class,unknown,unknown,unknown,paper_form,synthetic,no,no,no
+0.1.0,SYN-00133,10-14,TZ,TZ-region-4,rural,2026-08,22,5,light,4,,,no,unknown,not_needed,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00134,20-24,ZA,ZA-region-2,peri_urban,2026-02,23,10,moderate,0,back_pain;cramps;dizziness;nausea,,yes,unknown,wanted_but_could_not_access,paper_form,synthetic,no,yes,no
+0.1.0,SYN-00135,15-19,GH,GH-region-1,peri_urban,2026-02,35,8,heavy,8,dizziness;fatigue;nausea,,yes,reliable,not_needed,chw_interview,synthetic,yes,no,no
+0.1.0,SYN-00136,45-54,ZW,ZW-region-4,rural,2026-06,35,4,light,6,fatigue;mood_changes,"Low energy, sleeping more than usual",no,unknown,visited_provider,paper_form,synthetic,no,yes,no
+0.1.0,SYN-00137,25-34,ZW,ZW-region-1,rural,2026-03,32,6,light,4,fatigue,,unknown,sometimes_limited,wanted_but_could_not_access,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00138,20-24,RW,RW-region-3,peri_urban,2026-06,24,4,very_heavy,3,dizziness,Dizzy spells especially on heavy days,no,often_limited,visited_provider,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00139,35-44,RW,RW-region-1,urban,2026-04,34,8,moderate,0,cramps;nausea,,yes,often_limited,not_needed,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00140,20-24,ZW,ZW-region-3,peri_urban,2026-05,21,6,moderate,1,back_pain;headache,,unknown,reliable,unknown,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00141,20-24,TZ,TZ-region-2,peri_urban,2026-12,35,2,light,3,mood_changes;nausea,,no,reliable,unknown,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00142,25-34,GH,GH-region-2,rural,2026-05,31,6,heavy,6,back_pain;nausea,Back ache made it hard to sit through class,unknown,sometimes_limited,not_needed,paper_form,synthetic,no,no,no
+0.1.0,SYN-00143,45-54,KE,KE-region-1,urban,2026-08,26,4,heavy,8,headache;nausea,,yes,sometimes_limited,visited_provider,web_form,synthetic,no,no,no
+0.1.0,SYN-00144,15-19,NG,NG-region-2,urban,2026-03,26,8,very_heavy,5,cramps;fatigue,Cramps started two days before my period | Been feeling so tired I can't do my usual work | Clots the size of coins passing,no,sometimes_limited,unknown,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00145,25-34,ZA,ZA-region-3,peri_urban,2026-03,21,4,light,5,cramps;fatigue,"Cramps started two days before my period | Low energy, sleeping more than usual",unknown,often_limited,wanted_but_could_not_access,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00146,20-24,ZW,ZW-region-2,rural,2026-04,26,5,heavy,5,back_pain,,yes,sometimes_limited,visited_provider,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00147,25-34,TZ,TZ-region-4,rural,2026-07,21,7,light,0,,,no,reliable,not_needed,web_form,synthetic,no,no,no
+0.1.0,SYN-00148,45-54,GH,GH-region-4,peri_urban,2026-06,34,6,moderate,6,back_pain;cramps,Severe cramping that painkillers didn't help,yes,reliable,visited_provider,mobile_form,synthetic,no,yes,no
+0.1.0,SYN-00149,15-19,KE,KE-region-3,rural,2026-03,20,7,very_heavy,7,back_pain;dizziness;fatigue;headache;mood_changes,Been feeling so tired I can't do my usual work,yes,unknown,unknown,chw_interview,synthetic,yes,no,no
+0.1.0,SYN-00150,25-34,ZA,ZA-region-3,rural,2026-10,22,5,heavy,5,dizziness;nausea,,unknown,reliable,wanted_but_could_not_access,web_form,synthetic,no,no,no
+0.1.0,SYN-00151,25-34,ZW,ZW-region-2,urban,2026-02,31,6,heavy,6,cramps;dizziness;fatigue;mood_changes,Mild cramping on first day only | Felt lightheaded when standing up quickly,yes,unknown,visited_provider,web_form,synthetic,yes,no,yes
+0.1.0,SYN-00152,25-34,GH,GH-region-3,urban,2026-09,35,3,heavy,7,back_pain;cramps;headache;mood_changes,Back ache made it hard to sit through class,unknown,reliable,visited_provider,paper_form,synthetic,no,yes,no
+0.1.0,SYN-00153,45-54,ZA,ZA-region-4,urban,2026-01,28,8,heavy,6,,,unknown,reliable,unknown,web_form,synthetic,no,no,no
+0.1.0,SYN-00154,15-19,ZW,ZW-region-2,urban,2026-02,35,6,heavy,10,,,unknown,unknown,not_needed,web_form,synthetic,no,no,no
+0.1.0,SYN-00155,45-54,RW,RW-region-3,peri_urban,2026-12,27,6,heavy,5,dizziness;mood_changes,,no,sometimes_limited,wanted_but_could_not_access,paper_form,synthetic,no,no,no
+0.1.0,SYN-00156,20-24,NG,NG-region-4,rural,2026-11,32,2,heavy,8,dizziness,,no,often_limited,unknown,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00157,15-19,GH,GH-region-3,rural,2026-09,22,3,very_heavy,5,dizziness;fatigue;headache,Nearly fainted at the market | Fatigue lasted for days after bleeding stopped,no,often_limited,wanted_but_could_not_access,web_form,synthetic,yes,no,no
+0.1.0,SYN-00158,45-54,UG,UG-region-3,rural,2026-03,28,3,very_heavy,7,cramps;fatigue,Been feeling so tired I can't do my usual work,yes,often_limited,visited_provider,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00159,10-14,NG,NG-region-2,peri_urban,2026-03,28,8,heavy,7,dizziness;headache,,yes,reliable,wanted_but_could_not_access,web_form,synthetic,no,no,no
+0.1.0,SYN-00160,20-24,RW,RW-region-2,urban,2026-01,29,8,very_heavy,10,back_pain;cramps,,unknown,often_limited,unknown,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00161,20-24,GH,GH-region-1,rural,2026-02,25,7,moderate,0,,,no,sometimes_limited,visited_provider,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00162,15-19,ZA,ZA-region-1,urban,2026-08,31,8,heavy,9,,,unknown,often_limited,visited_provider,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00163,20-24,KE,KE-region-1,rural,2026-09,27,4,moderate,6,,,no,reliable,visited_provider,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00164,35-44,KE,KE-region-3,peri_urban,2026-11,27,5,heavy,10,cramps;nausea,Heavy flow that soaked through to my clothes,yes,often_limited,visited_provider,paper_form,synthetic,no,no,no
+0.1.0,SYN-00165,35-44,ZA,ZA-region-4,rural,2026-06,27,8,heavy,6,cramps;fatigue;headache;mood_changes,Been feeling so tired I can't do my usual work | Bleeding through clothes twice this cycle,no,sometimes_limited,visited_provider,chw_interview,synthetic,no,yes,no
+0.1.0,SYN-00166,20-24,ZW,ZW-region-4,peri_urban,2026-05,33,4,light,5,fatigue,,yes,sometimes_limited,not_needed,web_form,synthetic,no,no,no
+0.1.0,SYN-00167,20-24,ZW,ZW-region-3,rural,2026-03,25,5,moderate,3,back_pain;headache,Lower back pain that radiates down my legs,no,reliable,unknown,chw_interview,synthetic,yes,no,no
+0.1.0,SYN-00168,35-44,NG,NG-region-3,rural,2026-10,32,8,moderate,2,dizziness;fatigue;headache,"Low energy, sleeping more than usual",yes,sometimes_limited,unknown,web_form,synthetic,yes,no,no
+0.1.0,SYN-00169,10-14,TZ,TZ-region-2,peri_urban,2026-02,28,8,heavy,8,dizziness,Bleeding through clothes twice this cycle,yes,often_limited,wanted_but_could_not_access,paper_form,synthetic,no,no,no
+0.1.0,SYN-00170,45-54,KE,KE-region-2,rural,2026-10,28,3,moderate,7,fatigue;mood_changes,Been feeling so tired I can't do my usual work,no,sometimes_limited,visited_provider,paper_form,synthetic,no,no,no
+0.1.0,SYN-00171,15-19,ZA,ZA-region-2,rural,2026-10,22,3,heavy,7,dizziness,,no,sometimes_limited,not_needed,paper_form,synthetic,no,no,no
+0.1.0,SYN-00172,25-34,KE,KE-region-4,urban,2026-06,16,7,moderate,6,cramps;dizziness;fatigue;headache,Severe cramping that painkillers didn't help | Dizzy spells especially on heavy days,yes,reliable,unknown,paper_form,synthetic,no,no,yes
+0.1.0,SYN-00173,10-14,TZ,TZ-region-3,rural,2026-07,30,6,heavy,3,,Bleeding through clothes twice this cycle,unknown,sometimes_limited,unknown,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00174,35-44,UG,UG-region-3,rural,2026-12,23,4,moderate,7,dizziness;nausea,,no,unknown,wanted_but_could_not_access,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00175,45-54,NG,NG-region-1,urban,2026-02,23,5,moderate,0,back_pain;cramps,,yes,often_limited,wanted_but_could_not_access,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00176,25-34,ZA,ZA-region-3,rural,2026-04,31,5,light,2,cramps,,yes,reliable,wanted_but_could_not_access,paper_form,synthetic,no,no,no
+0.1.0,SYN-00177,45-54,GH,GH-region-3,urban,2026-02,32,2,heavy,3,back_pain;dizziness;mood_changes,,yes,often_limited,not_needed,web_form,synthetic,yes,no,no
+0.1.0,SYN-00178,15-19,UG,UG-region-4,peri_urban,2026-06,22,5,moderate,4,back_pain;fatigue,,unknown,reliable,not_needed,paper_form,synthetic,no,no,no
+0.1.0,SYN-00179,45-54,UG,UG-region-3,urban,2026-04,23,7,light,4,fatigue;nausea,Exhausted all through my period,unknown,sometimes_limited,not_needed,paper_form,synthetic,no,no,no
+0.1.0,SYN-00180,10-14,ZW,ZW-region-4,rural,2026-10,26,9,heavy,7,fatigue,Bleeding through clothes twice this cycle,no,often_limited,not_needed,paper_form,synthetic,yes,no,no
+0.1.0,SYN-00181,25-34,UG,UG-region-2,peri_urban,2026-02,34,5,heavy,8,nausea,,yes,often_limited,wanted_but_could_not_access,web_form,synthetic,no,no,no
+0.1.0,SYN-00182,45-54,NG,NG-region-1,peri_urban,2026-07,33,5,very_heavy,8,headache,,unknown,reliable,wanted_but_could_not_access,mobile_form,synthetic,no,no,no
+0.1.0,SYN-00183,45-54,KE,KE-region-2,peri_urban,2026-10,26,2,moderate,4,cramps,,no,sometimes_limited,not_needed,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00184,45-54,ZW,ZW-region-4,urban,2026-02,31,8,light,2,nausea,,unknown,reliable,wanted_but_could_not_access,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00185,20-24,TZ,TZ-region-3,rural,2026-12,32,6,heavy,8,back_pain;nausea,,yes,reliable,wanted_but_could_not_access,paper_form,synthetic,no,no,no
+0.1.0,SYN-00186,25-34,GH,GH-region-2,urban,2026-12,22,7,light,2,headache,,yes,often_limited,unknown,paper_form,synthetic,no,no,no
+0.1.0,SYN-00187,10-14,GH,GH-region-2,rural,2026-10,29,5,moderate,4,,,unknown,unknown,unknown,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00188,15-19,KE,KE-region-4,peri_urban,2026-08,26,4,light,2,dizziness,,yes,often_limited,visited_provider,web_form,synthetic,no,no,no
+0.1.0,SYN-00189,10-14,UG,UG-region-1,urban,2026-07,34,5,light,6,,,no,sometimes_limited,not_needed,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00190,20-24,ZA,ZA-region-1,urban,2026-03,25,7,moderate,7,fatigue;nausea,,no,often_limited,not_needed,paper_form,synthetic,no,no,no
+0.1.0,SYN-00191,15-19,KE,KE-region-1,urban,2026-04,28,6,heavy,8,dizziness;fatigue;headache,,yes,unknown,visited_provider,paper_form,synthetic,yes,no,no
+0.1.0,SYN-00192,20-24,UG,UG-region-2,urban,2026-03,26,8,very_heavy,6,back_pain;cramps;mood_changes,Changing pads every hour on heavy days,yes,often_limited,visited_provider,mobile_form,synthetic,no,yes,no
+0.1.0,SYN-00193,35-44,KE,KE-region-4,urban,2026-12,33,5,moderate,5,cramps;fatigue,Cramps started two days before my period | Been feeling so tired I can't do my usual work,unknown,often_limited,unknown,paper_form,synthetic,no,no,no
+0.1.0,SYN-00194,20-24,ZW,ZW-region-4,peri_urban,2026-12,28,4,light,2,dizziness,,no,sometimes_limited,visited_provider,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00195,45-54,KE,KE-region-1,rural,2026-09,30,4,heavy,5,nausea,,unknown,reliable,visited_provider,paper_form,synthetic,no,no,no
+0.1.0,SYN-00196,10-14,ZW,ZW-region-1,urban,2026-04,21,4,heavy,7,,,unknown,unknown,visited_provider,web_form,synthetic,no,no,no
+0.1.0,SYN-00197,35-44,ZA,ZA-region-4,peri_urban,2026-02,22,8,moderate,4,cramps;fatigue;nausea,,yes,sometimes_limited,wanted_but_could_not_access,web_form,synthetic,no,yes,no
+0.1.0,SYN-00198,35-44,ZW,ZW-region-2,peri_urban,2026-07,33,7,heavy,9,back_pain,,unknown,often_limited,not_needed,web_form,synthetic,no,no,no
+0.1.0,SYN-00199,45-54,GH,GH-region-2,peri_urban,2026-02,24,3,moderate,4,cramps,,unknown,reliable,unknown,chw_interview,synthetic,no,no,no
+0.1.0,SYN-00200,35-44,RW,RW-region-4,urban,2026-12,32,2,moderate,3,headache;nausea,,yes,reliable,not_needed,mobile_form,synthetic,no,no,no

@@ -27,6 +27,8 @@ dev = ["pytest>=8"]
 mho = "menstrual_health_open.cli:main"
 mho-generate = "menstrual_health_open.cli:generate_command"
 mho-validate = "menstrual_health_open.cli:validate_command"
+mho-risk = "menstrual_health_open.cli:risk_command"
+mho-triage = "menstrual_health_open.cli:triage_command"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/menstrual_health_open"]

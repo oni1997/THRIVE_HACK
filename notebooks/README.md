@@ -11,6 +11,8 @@ participant data.
 | `01_explore_synthetic_data.ipynb` | Tour of the synthetic dataset, schema fields, and distributions |
 | `02_data_quality_walkthrough.ipynb` | Using the validator programmatically and building quality reports |
 | `03_research_questions_starter.ipynb` | Example analysis patterns, including small-cell suppression |
+| `04_risk_modeling.ipynb` | ML models predicting iron deficiency from self-reported data (Prompt B) |
+| `05_triage_demo.ipynb` | End-to-end CHW triage pipeline from community data to referrals (Prompts B + C) |
 
 ## Setup
 

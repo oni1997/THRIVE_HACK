@@ -27,13 +27,22 @@ jobs:
         run: python -m pip install -e ".[dev]"
 
       - name: Compile Python files
-        run: python -m compileall src synthetic-data validation tests
+        run: python -m compileall src synthetic-data validation tests dashboard
 
       - name: Validate bundled synthetic sample
         run: python validation/validate_dataset.py synthetic-data/sample_20.csv
 
+      - name: Validate condition-labeled dataset
+        run: python validation/validate_dataset.py synthetic-data/datasets/sample_with_conditions_200.csv
+
       - name: Generate synthetic smoke-test dataset
         run: python synthetic-data/generate.py --count 25 --missingness 0.1 --output /tmp/mho_synthetic.csv
+
+      - name: Generate conditions smoke-test dataset
+        run: python synthetic-data/generate.py --count 50 --conditions --output /tmp/mho_conditions.csv
+
+      - name: Validate generated conditions dataset
+        run: python validation/validate_dataset.py /tmp/mho_conditions.csv
 
       - name: Validate generated smoke-test dataset
         run: python validation/validate_dataset.py /tmp/mho_synthetic.csv
