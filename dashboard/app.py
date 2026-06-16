@@ -90,7 +90,7 @@ def render_explore_tab(df: pd.DataFrame) -> None:
     with left:
         st.subheader("Pain score by flow heaviness")
         st.altair_chart(
-            alt.Chart(df).mark_boxplot(outlierColor="#E29578").encode(
+            alt.Chart(df).mark_boxplot().encode(
                 x=alt.X("flow_heaviness:N", sort=FLOW_ORDER, title=None),
                 y=alt.Y("pain_score:Q", title="Pain score (0-10)"),
                 color=alt.Color("flow_heaviness:N", sort=FLOW_ORDER, legend=None,
