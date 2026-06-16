@@ -19,38 +19,36 @@ FLOW_ORDER = ["light", "moderate", "heavy", "very_heavy"]
 
 st.set_page_config(page_title="THRIVE Triage — Menstrual Health Decision Support", layout="wide")
 
-LIGHT_BG = "#FAF9F6"
-DARK_BG = "#0D1117"
-DARK_CARD = "#161B22"
-DARK_BORDER = "#30363D"
+PRIMARY = "#4A7C7A"
+SECONDARY = "#D4897A"
+CHART_COLORS = ["#4A7C7A", "#D4897A", "#7CA08A", "#C9A97A", "#9A7CA0", "#7A8CA0"]
+
+DP_BG = "#1C1C24"
+DP_CARD = "#262630"
+DP_BORDER = "#363640"
 
 alt.themes.register("thrive", lambda: {
     "config": {
         "view": {"stroke": "transparent"},
-        "axis": {"labelFontSize": 12, "titleFontSize": 13, "grid": False},
+        "axis": {"labelFontSize": 12, "titleFontSize": 13, "grid": False, "labelColor": "#5A5A65",
+                 "titleColor": "#3A3A45", "domainColor": "#E0E0E4", "tickColor": "#E0E0E4"},
         "header": {"labelFontSize": 12, "titleFontSize": 13},
         "legend": {"labelFontSize": 11},
-        "range": {
-            "category": ["#006D77", "#E29578", "#2A9D8F", "#FFB703", "#264653", "#8AB17D"],
-            "diverging": ["#D62828", "#FFB703", "#2A9D8F"],
-            "heatmap": ["#006D77", "#83C5BE", "#E8E8E4"],
-        },
+        "range": {"category": CHART_COLORS, "diverging": ["#C4837A", "#C9A97A", "#7CA08A"],
+                  "heatmap": ["#EDECE8", "#D4D0C8", "#4A7C7A"]},
     }
 })
 alt.themes.register("thrive-dark", lambda: {
     "config": {
-        "view": {"stroke": DARK_BORDER},
-        "background": DARK_BG,
-        "title": {"color": "#F0F6FC"},
+        "view": {"stroke": DP_BORDER}, "background": DP_BG,
+        "title": {"color": "#E4E4EC"},
         "axis": {"labelFontSize": 12, "titleFontSize": 13, "grid": False,
-                 "labelColor": "#8B949E", "titleColor": "#F0F6FC", "domainColor": DARK_BORDER, "tickColor": DARK_BORDER},
-        "header": {"labelFontSize": 12, "titleFontSize": 13, "labelColor": "#F0F6FC", "titleColor": "#F0F6FC"},
-        "legend": {"labelFontSize": 11, "labelColor": "#F0F6FC", "titleColor": "#F0F6FC"},
-        "range": {
-            "category": ["#58A6FF", "#FF7B72", "#3FB950", "#D29922", "#BC8CFF", "#79C0FF"],
-            "diverging": ["#FF7B72", "#D29922", "#3FB950"],
-            "heatmap": ["#0D1117", "#161B22", "#30363D"],
-        },
+                 "labelColor": "#9A9AA8", "titleColor": "#E4E4EC", "domainColor": DP_BORDER, "tickColor": DP_BORDER},
+        "header": {"labelFontSize": 12, "titleFontSize": 13, "labelColor": "#E4E4EC", "titleColor": "#E4E4EC"},
+        "legend": {"labelFontSize": 11, "labelColor": "#E4E4EC", "titleColor": "#E4E4EC"},
+        "range": {"category": ["#7CB8B6", "#E8A898", "#9ABAA4", "#D4BA8A", "#B49AB8", "#9AAAB8"],
+                  "diverging": ["#D4897A", "#C9A97A", "#7CA08A"],
+                  "heatmap": ["#1C1C24", "#262630", "#363640"]},
     }
 })
 alt.themes.enable("thrive")
@@ -58,84 +56,94 @@ alt.themes.enable("thrive")
 st.markdown("""
 <style>
 :root {
-    --bg: #FAF9F6; --bg-card: #FFFFFF; --bg-card-alt: #F6F8FA;
-    --text: #1A1A2E; --text-muted: #555; --text-caption: #888;
-    --border: #ddd; --border-light: #E8E8E4;
-    --focus: #006D77; --focus-ring: 0 0 0 3px rgba(0,109,119,0.3);
-    --risk-high-bg: #FEF1F0; --risk-high-border: #D62828;
-    --risk-mod-bg: #FFF8E7; --risk-mod-border: #FFB703;
-    --risk-low-bg: #F0F9F6; --risk-low-border: #2A9D8F;
-    --ref-bg: #FFF8E7; --ref-border: #FFB703;
+    --bg: #F5F4F0; --bg-card: #FFFFFF; --bg-card-alt: #F0EFEA;
+    --text: #2D2D35; --text-muted: #6A6A75; --text-caption: #9A9AA5;
+    --shadow: 0 1px 4px rgba(0,0,0,0.06);
+    --focus: #4A7C7A; --focus-ring: 0 0 0 3px rgba(74,124,122,0.25);
+    --hr: #E0DED8;
+    --risk-high-bg: #F7ECEB; --risk-high-border: #C4837A;
+    --risk-mod-bg: #F6EEE1; --risk-mod-border: #C9A97A;
+    --risk-low-bg: #E8EFE9; --risk-low-border: #7CA08A;
+    --ref-bg: #F6EEE1; --ref-border: #C9A97A;
     font-size: 16px;
 }
 .dark-mode {
-    --bg: #0D1117; --bg-card: #161B22; --bg-card-alt: #0D1117;
-    --text: #F0F6FC; --text-muted: #8B949E; --text-caption: #6E7681;
-    --border: #30363D; --border-light: #21262D;
-    --focus: #58A6FF; --focus-ring: 0 0 0 3px rgba(88,166,255,0.4);
-    --risk-high-bg: #2D1517; --risk-high-border: #FF7B72;
-    --risk-mod-bg: #2D2410; --risk-mod-border: #D29922;
-    --risk-low-bg: #0F2D1B; --risk-low-border: #3FB950;
-    --ref-bg: #2D2410; --ref-border: #D29922;
+    --bg: #1C1C24; --bg-card: #262630; --bg-card-alt: #1C1C24;
+    --text: #E4E4EC; --text-muted: #9A9AA8; --text-caption: #7A7A88;
+    --shadow: 0 1px 4px rgba(0,0,0,0.3);
+    --focus: #7CB8B6; --focus-ring: 0 0 0 3px rgba(124,184,182,0.3);
+    --hr: #363640;
+    --risk-high-bg: #2D1E1D; --risk-high-border: #C4837A;
+    --risk-mod-bg: #2D2619; --risk-mod-border: #C9A97A;
+    --risk-low-bg: #1A2B1E; --risk-low-border: #7CA08A;
+    --ref-bg: #2D2619; --ref-border: #C9A97A;
 }
 .stApp { background: var(--bg); color: var(--text); }
-h1, h2, h3, .stTabs [data-baseweb="tab"], .stTabs [aria-selected="true"],
-.stMarkdown, p, li, .stSelectbox label, .stMultiSelect label {
-    color: var(--text) !important;
-}
-.stTabs [data-baseweb="tab"] { border-radius: 0.5rem 0.5rem 0 0; font-weight: 500; padding: 0.5rem 1rem; }
-.stTabs [aria-selected="true"] { background: #006D77 !important; color: white !important; }
+h1 { font-size: 1.65rem; font-weight: 700; letter-spacing: -0.02em; color: var(--text) !important; }
+h2 { font-size: 1.2rem; font-weight: 600; color: var(--text) !important; }
+h3 { font-size: 1rem; font-weight: 600; color: var(--text) !important; }
+.stTabs [data-baseweb="tab-list"] { gap: 4px; background: var(--bg-card); padding: 4px; border-radius: 10px; }
+.stTabs [data-baseweb="tab"] { border-radius: 8px; font-weight: 500; font-size: 0.9rem;
+    padding: 0.4rem 1rem; color: var(--text-muted) !important; border: none !important; }
+.stTabs [aria-selected="true"] { background: var(--bg) !important; color: var(--text) !important;
+    box-shadow: var(--shadow); }
+.stSelectbox label, .stMultiSelect label { color: var(--text) !important; font-weight: 500; font-size: 0.85rem; }
 .stSelectbox div[data-baseweb="select"] > div, .stMultiSelect div[data-baseweb="select"] > div {
-    background: var(--bg-card) !important; color: var(--text) !important; border-color: var(--border) !important;
-}
-.st-bb, .st-at, .st-ae, .st-af, .st-ag { background: var(--bg-card) !important; color: var(--text) !important; }
-.stMetric, .stMetric label, .stMetric [data-testid="stMetricValue"] { color: var(--text) !important; }
-.stMetric [data-testid="stMetricValue"] { font-weight: 700 !important; }
-.dataframe { background: var(--bg-card) !important; color: var(--text) !important; }
+    background: var(--bg-card) !important; color: var(--text) !important;
+    border: 1px solid var(--hr) !important; border-radius: 8px !important; box-shadow: var(--shadow); }
+.st-bb, .st-at, .st-ae, .st-af, .st-ag, .st-cd, .st-ce { background: var(--bg-card) !important; color: var(--text) !important; }
+.stSelectbox li[role="option"], .stMultiSelect li[role="option"] { color: var(--text) !important; }
+.stSelectbox li[role="option"]:hover, .stMultiSelect li[role="option"]:hover { background: var(--bg-card-alt) !important; }
+div[data-baseweb="menu"] { background: var(--bg-card) !important; border: 1px solid var(--hr) !important; border-radius: 8px !important; }
+.stButton > button { background: var(--bg-card) !important; color: var(--text) !important;
+    border: 1px solid var(--hr) !important; border-radius: 8px !important; }
+.stMetric { background: var(--bg-card); padding: 0.75rem 1rem; border-radius: 10px;
+    box-shadow: var(--shadow); }
+.stMetric label { color: var(--text-muted) !important; font-weight: 500 !important; font-size: 0.8rem; }
+.stMetric [data-testid="stMetricValue"] { color: var(--text) !important; font-weight: 700 !important; font-size: 1.5rem; }
+.dataframe { background: var(--bg-card) !important; color: var(--text) !important;
+    border-radius: 10px; }
 .dataframe th { background: var(--bg-card-alt) !important; color: var(--text) !important; }
-.dataframe td { border-color: var(--border) !important; color: var(--text) !important; }
+.dataframe td { border-color: var(--hr) !important; color: var(--text) !important; }
+.stAlert { background: var(--bg-card) !important; color: var(--text); border: 1px solid var(--hr); border-radius: 8px; }
+hr { border-color: var(--hr) !important; }
+.stMarkdown p { line-height: 1.6; }
+.stCaption { color: var(--text-caption); }
 
 *:focus-visible { outline: 2px solid var(--focus) !important; outline-offset: 2px; border-radius: 4px; }
 .stSelectbox *:focus-visible, .stMultiSelect *:focus-visible,
 .stTabs [data-baseweb="tab"]:focus-visible { box-shadow: var(--focus-ring); }
 
-.stMarkdown p { line-height: 1.6; }
-code { font-size: 0.85rem; }
-.stCaption { color: var(--text-caption); }
-
 .risk-high { background: var(--risk-high-bg); border-left: 4px solid var(--risk-high-border);
-    padding: 0.75rem 1rem; border-radius: 0.5rem; margin: 0.5rem 0; color: var(--text); }
+    padding: 0.75rem 1rem; border-radius: 8px; margin: 0.5rem 0; color: var(--text);
+    box-shadow: var(--shadow); }
 .risk-moderate { background: var(--risk-mod-bg); border-left: 4px solid var(--risk-mod-border);
-    padding: 0.75rem 1rem; border-radius: 0.5rem; margin: 0.5rem 0; color: var(--text); }
+    padding: 0.75rem 1rem; border-radius: 8px; margin: 0.5rem 0; color: var(--text);
+    box-shadow: var(--shadow); }
 .risk-low { background: var(--risk-low-bg); border-left: 4px solid var(--risk-low-border);
-    padding: 0.75rem 1rem; border-radius: 0.5rem; margin: 0.5rem 0; color: var(--text); }
+    padding: 0.75rem 1rem; border-radius: 8px; margin: 0.5rem 0; color: var(--text);
+    box-shadow: var(--shadow); }
 .risk-badge-high { background: var(--risk-high-border); color: white;
-    padding: 0.1rem 0.6rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600; }
-.risk-badge-moderate { background: var(--risk-mod-border); color: #1A1A2E;
-    padding: 0.1rem 0.6rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600; }
+    padding: 0.1rem 0.6rem; border-radius: 1rem; font-size: 0.7rem; font-weight: 700; }
+.risk-badge-moderate { background: var(--risk-mod-border); color: #2D2D35;
+    padding: 0.1rem 0.6rem; border-radius: 1rem; font-size: 0.7rem; font-weight: 700; }
 .risk-badge-low { background: var(--risk-low-border); color: white;
-    padding: 0.1rem 0.6rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600; }
+    padding: 0.1rem 0.6rem; border-radius: 1rem; font-size: 0.7rem; font-weight: 700; }
 .referral-box { background: var(--ref-bg); border: 1px solid var(--ref-border);
-    border-radius: 0.5rem; padding: 0.75rem; margin-top: 0.5rem; color: var(--text); }
-.patient-card { background: var(--bg-card); border: 1px solid var(--border);
-    border-radius: 0.75rem; padding: 1.25rem; color: var(--text); }
-.stAlert { color: var(--text); border-color: var(--border); }
-.stAlert > div { background: var(--bg-card) !important; }
+    border-radius: 8px; padding: 0.75rem; margin-top: 0.5rem; color: var(--text); }
+.patient-card { background: var(--bg-card); border-radius: 10px; padding: 1.25rem;
+    color: var(--text); box-shadow: var(--shadow); }
 @media (max-width: 768px) {
     .row-widget.stColumns { flex-direction: column; }
-    .stTabs [data-baseweb="tab"] { font-size: 0.85rem; padding: 0.4rem 0.6rem; }
-    h1 { font-size: 1.4rem; }
-    h2 { font-size: 1.15rem; }
+    h1 { font-size: 1.3rem; }
+    h2 { font-size: 1rem; }
+    .stMetric [data-testid="stMetricValue"] { font-size: 1.2rem; }
 }
 </style>
 <script>
 const m = window.matchMedia('(prefers-color-scheme: dark)');
-function setTheme(e) {
-    const d = document.documentElement;
-    if (e.matches) { d.classList.add('dark-mode'); } else { d.classList.remove('dark-mode'); }
-}
-m.addEventListener('change', setTheme);
-setTheme(m);
+function setTheme(e) { document.documentElement.classList.toggle('dark-mode', e.matches); }
+m.addEventListener('change', setTheme); setTheme(m);
 </script>
 """, unsafe_allow_html=True)
 
@@ -169,14 +177,14 @@ def render_explore_tab(df: pd.DataFrame) -> None:
                 x=alt.X("flow_heaviness:N", sort=FLOW_ORDER, title=None),
                 y=alt.Y("pain_score:Q", title="Pain score (0-10)"),
                 color=alt.Color("flow_heaviness:N", sort=FLOW_ORDER, legend=None,
-                                scale=alt.Scale(range=["#83C5BE", "#006D77", "#E29578", "#D62828"])),
+                                scale=alt.Scale(range=["#C4D4C2", "#7CA08A", "#D4897A", "#C4837A"])),
             ).properties(height=250),
             use_container_width=True,
         )
 
         st.subheader("Cycle length distribution")
         st.altair_chart(
-            alt.Chart(df).mark_bar(color="#006D77", opacity=0.85).encode(
+            alt.Chart(df).mark_bar(color="#4A7C7A", opacity=0.8).encode(
                 x=alt.X("cycle_length_days:Q", bin=alt.Bin(step=1), title="Cycle length (days)"),
                 y=alt.Y("count()", title="Records"),
             ).properties(height=200),
@@ -190,7 +198,7 @@ def render_explore_tab(df: pd.DataFrame) -> None:
         symptom_counts = symptoms.value_counts().reset_index()
         symptom_counts.columns = ["symptom", "count"]
         st.altair_chart(
-            alt.Chart(symptom_counts).mark_bar(color="#E29578", opacity=0.85).encode(
+            alt.Chart(symptom_counts).mark_bar(color="#D4897A", opacity=0.8).encode(
                 x=alt.X("count:Q", title="Records"),
                 y=alt.Y("symptom:N", sort="-x", title=None),
             ).properties(height=250),
@@ -203,14 +211,14 @@ def render_explore_tab(df: pd.DataFrame) -> None:
                 x=alt.X("setting:N", title=None),
                 y=alt.Y("count()", stack="normalize", title="Share"),
                 color=alt.Color("product_access:N", title="Access",
-                                scale=alt.Scale(range=["#006D77", "#83C5BE", "#E29578", "#264653"])),
+                                scale=alt.Scale(range=["#4A7C7A", "#7CA08A", "#D4897A", "#9A7CA0"])),
             ).properties(height=200),
             use_container_width=True,
         )
 
     st.subheader("Records over time")
     st.altair_chart(
-        alt.Chart(df).mark_line(point=True, color="#006D77", strokeWidth=2).encode(
+        alt.Chart(df).mark_line(point=True, color="#4A7C7A", strokeWidth=2).encode(
             x=alt.X("collection_month:N", title="Month"),
             y=alt.Y("count()", title="Records"),
         ).properties(height=250),
@@ -307,7 +315,7 @@ def render_triage_tab(df: pd.DataFrame) -> None:
             y=alt.Y("score:Q", title="Risk score (0-100)", scale=alt.Scale(domain=[0, 100])),
             color=alt.Color("label:N", legend=None,
                             scale=alt.Scale(domain=list(condition_labels.values()),
-                                            range=["#006D77", "#E29578", "#2A9D8F"])),
+                                            range=["#4A7C7A", "#D4897A", "#7CA08A"])),
         ).properties(height=280),
         use_container_width=True,
     )
