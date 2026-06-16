@@ -36,24 +36,14 @@ alt.themes.enable("thrive")
 
 st.markdown("""
 <style>
-    .block-container { padding-top: 1.5rem; padding-bottom: 1.5rem; }
-    .stApp { background: #FAF9F6; }
-    h1, h2, h3 { color: #1A1A2E !important; font-weight: 600 !important; }
-    .stMetric label { color: #006D77 !important; font-weight: 600 !important; }
-    .stMetric [data-testid="stMetricValue"] { color: #1A1A2E !important; font-weight: 700 !important; }
-    .risk-high { background: #FEF1F0; border-left: 4px solid #D62828; padding: 1rem; border-radius: 0.5rem; margin: 0.5rem 0; }
-    .risk-moderate { background: #FFF8E7; border-left: 4px solid #FFB703; padding: 1rem; border-radius: 0.5rem; margin: 0.5rem 0; }
-    .risk-low { background: #F0F9F6; border-left: 4px solid #2A9D8F; padding: 1rem; border-radius: 0.5rem; margin: 0.5rem 0; }
-    .risk-badge-high { background: #D62828; color: white; padding: 0.15rem 0.6rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600; }
-    .risk-badge-moderate { background: #FFB703; color: #1A1A2E; padding: 0.15rem 0.6rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600; }
-    .risk-badge-low { background: #2A9D8F; color: white; padding: 0.15rem 0.6rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600; }
-    .patient-card { background: white; border: 1px solid #E8E8E4; border-radius: 0.75rem; padding: 1.25rem; }
-    .referral-box { background: #FFF8E7; border: 1px solid #FFB703; border-radius: 0.5rem; padding: 0.75rem; margin-top: 0.5rem; }
-    .stTabs [data-baseweb="tab-list"] { gap: 0.5rem; }
-    .stTabs [data-baseweb="tab"] { border-radius: 0.5rem 0.5rem 0 0; padding: 0.5rem 1rem; font-weight: 500; }
-    .stTabs [aria-selected="true"] { background: #006D77 !important; color: white !important; }
-    footer { text-align: center; color: #888; font-size: 0.8rem; padding-top: 2rem; }
-    @media (max-width: 768px) { .row-widget.stColumns { flex-direction: column; } }
+    .risk-high { background: #FEF1F0; border-left: 4px solid #D62828; padding: 0.75rem 1rem; border-radius: 0.5rem; margin: 0.5rem 0; color: #1A1A2E; }
+    .risk-moderate { background: #FFF8E7; border-left: 4px solid #FFB703; padding: 0.75rem 1rem; border-radius: 0.5rem; margin: 0.5rem 0; color: #1A1A2E; }
+    .risk-low { background: #F0F9F6; border-left: 4px solid #2A9D8F; padding: 0.75rem 1rem; border-radius: 0.5rem; margin: 0.5rem 0; color: #1A1A2E; }
+    .risk-badge-high { background: #D62828; color: white; padding: 0.1rem 0.6rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600; }
+    .risk-badge-moderate { background: #FFB703; color: #1A1A2E; padding: 0.1rem 0.6rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600; }
+    .risk-badge-low { background: #2A9D8F; color: white; padding: 0.1rem 0.6rem; border-radius: 1rem; font-size: 0.75rem; font-weight: 600; }
+    .referral-box { background: #FFF8E7; border: 1px solid #FFB703; border-radius: 0.5rem; padding: 0.75rem; margin-top: 0.5rem; color: #1A1A2E; }
+    .patient-card { background: white; border: 1px solid #ddd; border-radius: 0.75rem; padding: 1.25rem; color: #1A1A2E; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -65,25 +55,15 @@ def load_data(path: Path) -> pd.DataFrame:
     return df
 
 
-def metric_card(label: str, value: str, delta: str | None = None) -> None:
-    st.markdown(f"""
-    <div style="background:white;border:1px solid #E8E8E4;border-radius:0.75rem;padding:1rem;text-align:center;">
-        <div style="color:#006D77;font-size:0.85rem;font-weight:600;">{label}</div>
-        <div style="color:#1A1A2E;font-size:1.75rem;font-weight:700;line-height:1.2;">{value}</div>
-    </div>
-    """, unsafe_allow_html=True)
+
 
 
 def render_explore_tab(df: pd.DataFrame) -> None:
     cols = st.columns(4)
-    for c, (label, value) in zip(cols, [
-        ("Records", f"{len(df):,}"),
-        ("Median cycle", f"{df['cycle_length_days'].median():.0f} days"),
-        ("Median pain", f"{df['pain_score'].median():.0f} / 10"),
-        ("Missed school/work", f"{(df['missed_school_or_work'] == 'yes').mean():.0%}"),
-    ]):
-        with c:
-            metric_card(label, value)
+    cols[0].metric("Records", f"{len(df):,}")
+    cols[1].metric("Median cycle", f"{df['cycle_length_days'].median():.0f} days")
+    cols[2].metric("Median pain", f"{df['pain_score'].median():.0f} / 10")
+    cols[3].metric("Missed school/work", f"{(df['missed_school_or_work'] == 'yes').mean():.0%}")
 
     left, right = st.columns(2)
 
@@ -237,26 +217,19 @@ def render_triage_tab(df: pd.DataFrame) -> None:
     )
 
     if "condition_iron_deficiency" in df.columns:
-        col_a, col_b, col_c = st.columns(3)
-        for col, cond, label in [
-            (col_a, "condition_iron_deficiency", "Iron Deficiency"),
-            (col_b, "condition_fibroids", "Fibroids / Adenomyosis"),
-            (col_c, "condition_coagulation_disorder", "Coagulation Disorder"),
-        ]:
-            with col:
-                actual = df[cond].eq("yes").astype(int)
-                cond_key = cond.replace("condition_", "").replace("_", "_")
-                if cond_key == "fibroids":
-                    cond_key = "fibroids_adenomyosis"
-                predicted = (risk_df[cond_key] >= 50).astype(int)
-                correct = (actual == predicted).sum()
-                metric_card(f"{label} accuracy", f"{correct / len(df):.0%}")
+        cols = st.columns(3)
+        for i, (cond, label) in enumerate([
+            ("condition_iron_deficiency", "Iron Deficiency"),
+            ("condition_fibroids", "Fibroids / Adenomyosis"),
+            ("condition_coagulation_disorder", "Coagulation Disorder"),
+        ]):
+            actual = df[cond].eq("yes").astype(int)
+            cond_key = "fibroids_adenomyosis" if cond == "condition_fibroids" else cond.replace("condition_", "")
+            predicted = (risk_df[cond_key] >= 50).astype(int)
+            correct = (actual == predicted).sum()
+            cols[i].metric(f"{label} accuracy", f"{correct / len(df):.0%}")
 
         st.caption("Ground truth labels are synthetic — accuracy reflects the rule-based model against generated labels, not real clinical performance.")
-
-    st.markdown("<footer>THRIVE Hackathon 2026 · FlameLily Foundation · Mavara Research Collective</footer>",
-                unsafe_allow_html=True)
-
 
 def main() -> None:
     st.title("THRIVE Triage")
