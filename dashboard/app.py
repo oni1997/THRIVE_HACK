@@ -12,7 +12,7 @@ import pandas as pd
 import streamlit as st
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_DATASET = REPO_ROOT / "synthetic-data" / "datasets" / "survey_responses_1000.csv"
+DEFAULT_DATASET = REPO_ROOT / "synthetic-data" / "datasets" / "sample_with_conditions_200.csv"
 
 AGE_BAND_ORDER = ["10-14", "15-19", "20-24", "25-34", "35-44", "45-54"]
 FLOW_ORDER = ["light", "moderate", "heavy", "very_heavy"]
