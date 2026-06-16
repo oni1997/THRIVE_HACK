@@ -17,11 +17,14 @@ def main() -> int:
     parser.add_argument("--count", type=int, default=100)
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--missingness", type=float, default=0.0)
+    parser.add_argument("--conditions", action="store_true",
+                        help="Include ground-truth condition labels and free-text symptoms")
     parser.add_argument("--format", choices=["csv", "jsonl"], default="csv")
     parser.add_argument("--output", default="synthetic-data/generated.csv")
     args = parser.parse_args()
 
-    records = iter_records(args.count, seed=args.seed, missingness=args.missingness)
+    records = iter_records(args.count, seed=args.seed, missingness=args.missingness,
+                           include_conditions=args.conditions)
     output = write_jsonl(records, args.output) if args.format == "jsonl" else write_csv(records, args.output)
     print(json.dumps({"output": str(output), "count": args.count, "format": args.format}, sort_keys=True))
     return 0
