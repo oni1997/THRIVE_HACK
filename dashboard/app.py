@@ -95,6 +95,9 @@ h3 { font-size: 1rem; font-weight: 600; color: var(--text) !important; }
 .stSelectbox li[role="option"], .stMultiSelect li[role="option"] { color: var(--text) !important; }
 .stSelectbox li[role="option"]:hover, .stMultiSelect li[role="option"]:hover { background: var(--bg-card-alt) !important; }
 div[data-baseweb="menu"] { background: var(--bg-card) !important; border: 1px solid var(--hr) !important; border-radius: 8px !important; }
+.stSelectbox input::placeholder, .stMultiSelect input::placeholder { color: var(--text-caption) !important; opacity: 0.7; }
+.stSelectbox [data-testid="stSelectbox"] [data-baseweb="select"] span, .stMultiSelect span {
+    color: var(--text) !important; }
 .stButton > button { background: var(--bg-card) !important; color: var(--text) !important;
     border: 1px solid var(--hr) !important; border-radius: 8px !important; }
 .stMetric { background: var(--bg-card); padding: 0.75rem 1rem; border-radius: 10px;
@@ -133,6 +136,27 @@ hr { border-color: var(--hr) !important; }
     border-radius: 8px; padding: 0.75rem; margin-top: 0.5rem; color: var(--text); }
 .patient-card { background: var(--bg-card); border-radius: 10px; padding: 1.25rem;
     color: var(--text); box-shadow: var(--shadow); }
+.stSidebar .stApp { background: var(--bg-card-alt); }
+.stSidebar section { background: var(--bg-card-alt); }
+.stSidebar [data-testid="stSidebarContent"] { background: var(--bg-card-alt); padding: 1.5rem 1rem; }
+.stSidebar h2, .stSidebar h3 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.05em;
+    color: var(--text-muted) !important; margin-top: 1rem; }
+.stSidebar .stFileUploader section { background: var(--bg-card); border: 2px dashed var(--hr) !important;
+    border-radius: 10px; padding: 0.75rem; }
+.stSidebar .stFileUploader section:hover { border-color: var(--focus) !important;
+    background: var(--bg-card-alt) !important; }
+.stSidebar .stFileUploader [data-testid="stFileUploaderDropzone"] { min-height: 4rem; }
+.stSidebar .stFileUploader button { background: var(--bg-card) !important; color: var(--text) !important;
+    border: 1px solid var(--hr) !important; border-radius: 8px !important; font-size: 0.85rem; }
+.stSidebar .stFileUploader button:hover { border-color: var(--focus) !important; }
+.stSidebar .stMultiSelect div[data-baseweb="select"] > div {
+    background: var(--bg-card) !important; border-radius: 8px !important; min-height: 2.4rem; }
+.stSidebar .stMultiSelect div[data-baseweb="select"] > div:hover { border-color: var(--focus) !important; }
+.stSidebar .stSelectbox div[data-baseweb="select"] > div {
+    background: var(--bg-card) !important; border-radius: 8px !important; min-height: 2.4rem; }
+.stSidebar .stSelectbox div[data-baseweb="select"] > div:hover { border-color: var(--focus) !important; }
+.stSidebar .stToggle { padding: 0.5rem 0; }
+.stSidebar .stToggle label { font-size: 0.85rem; font-weight: 500; color: var(--text) !important; }
 @media (max-width: 768px) {
     .row-widget.stColumns { flex-direction: column; }
     h1 { font-size: 1.3rem; }
@@ -346,6 +370,13 @@ def main() -> None:
     )
 
     with st.sidebar:
+        st.markdown(f"<div style='font-size:0.8rem;font-weight:600;color:var(--text-muted);"
+                    f"text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem;'>"
+                    f"THRIVE Triage · v0.2</div>", unsafe_allow_html=True)
+
+        uploaded = st.file_uploader("Upload data", type="csv",
+                                    help="Upload a CSV file with menstrual health records")
+
         dark = st.toggle("Dark mode", value=st.session_state.get("dark_mode", False),
                          key="dark_toggle", help="Switch between light and dark theme")
         if dark != st.session_state.get("dark_mode"):
@@ -356,17 +387,15 @@ def main() -> None:
                 alt.themes.enable("thrive")
             st.rerun()
 
-        st.markdown("---")
-        uploaded = st.file_uploader("Load data (CSV)", type="csv")
-
     if uploaded is not None:
         df = pd.read_csv(uploaded)
         df["reported_symptoms"] = df["reported_symptoms"].fillna("")
     else:
         df = load_data(DEFAULT_DATASET)
 
-    st.sidebar.markdown("---")
-    st.sidebar.header("Filters")
+    st.sidebar.markdown("Filters")
+    st.sidebar.markdown(f"<hr style='margin:0.25rem 0 0.75rem 0;border-color:var(--hr);'>",
+                        unsafe_allow_html=True)
     countries = st.sidebar.multiselect(
         "Country", sorted(df["country_code"].unique()),
         default=sorted(df["country_code"].unique()),
